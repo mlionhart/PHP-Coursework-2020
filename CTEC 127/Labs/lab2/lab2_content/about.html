@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<!--
+   Author Name: Bruce Elgort
+   Assignment : About Page - Final Project
+   Due Date   : 03/08/2013
+-->
+
+<head>
+   <meta charset="utf-8" />
+   <title>Bruce's Drum Shop - About</title>
+   <link href="project.css" rel="stylesheet" />
+</head>
+
+<body>
+   <div id="pagewrapper">
+  
+      <header>
+	       <div id="header_bg">
+	       </div>        
+      </header>
+
+      <div id="sidebar">
+            <!-- start sidebar -->
+
+            <nav>
+            <ul>
+                <li><a href="welcome.html" title="Home page">Home</a></li>
+
+                <li><a href="products.html" title="Products page">Products</a></li>
+
+                <li><a href="order.html" title="Order page">Order</a></li>
+
+                <li><a href="contact.html" title="Contact page">Contact</a></li>
+
+                <li><a href="about.html" title="About page">About</a></li>
+            </ul>
+            </nav>
+        <div id="sidebarinner">
+        <h3>See Bruce Play</h3>
+        <p>Come meet Bruce at his drum clinic on Saturday, July 2nd at 2pm. Bruce will be supplying the pizza!</p>
+        </div><!-- end sidebar inner -->
+        </div><!-- end sidebar -->
+
+      <div id="content">
+         <h2>About Bruce's Drum Shop</h2>
+         <p>
+         <aside id="abouthero">
+			 <!-- BEGIN CODE FOR TODAYS DATE -->
+			
+			<span id="jsDate"></span>
+			<script>
+			
+				var todaysDate = new Date();
+				document.getElementById('jsDate').innerHTML = todaysDate.toLocaleDateString();
+			
+			</script>
+			   
+			<!-- END CODE FOR TODAYS DATE -->
+                 
+         <p>"Bruce has been drumming for over 40 years!"</p>
+         <img class="headshot" src="http://ctec.clark.edu/~belgort/images/be.jpg" height="160" width="159" alt="Bruce Elgort Photo" title="Photo of Bruce Elgort" />
+         
+         </aside>
+         <p>
+         Bruce has been drumming since the 4th grade! His first snare drum was a Ludwig Acrolite which his father purchased for him. Before Bruce had a real set of drums he used cardboard chlorine canisters!
+         </p>
+         <p>
+         Bruce's first drum set was part Ludwig and part Rogers. As a reward for getting good grades in school Bruce's parents would buy him another piece for his drum kit. Let's just say that Bruce started getting grades in school as a result of this.
+         </p>
+         <p>
+         In 1998 Bruce decided to share his passion for vintage and collectible drums by opening up Bruce's Drum Shop in Vancouver, WA.
+         </p>
+      
+		   <!-- Begin Facebook Like Code -->
+		
+		   <div id="fb-root"></div>
+		   
+		   <script>
+			   (function(d, s, id) {
+				   var js, fjs = d.getElementsByTagName(s)[0];
+				   if (d.getElementById(id)) return;
+				   js = d.createElement(s); js.id = id;
+				   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=6811732125";
+				   fjs.parentNode.insertBefore(js, fjs);
+			   }(document, 'script', 'facebook-jssdk'));
+			</script>
+		    
+			<div class="fb-like" data-href="https://www.facebook.com/ClarkCollege" data-width="50" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+		
+			<!-- End Facebook Like Code -->
+               
+      </div>  <!-- end of content -->
+          
+      <footer>
+          <div id="innerfooter">
+            <ul>
+                <li><a href="welcome.html">Home</a></li>
+
+                <li><a href="products.html">Products</a></li>
+
+                <li><a href="order.html">Order</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="about.html">About</a></li>
+            </ul>
+          </div><!-- end inner footer -->
+            <p>&copy; 2013 Bruce's Drum Shop</p>
+      </footer>
+    
+   </div>  <!-- end of pagewrapper -->
+  
+</body>
+</html>

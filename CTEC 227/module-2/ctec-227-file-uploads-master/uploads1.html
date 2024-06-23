@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>File Uploads Part 1</title>
+</head>
+<body>
+    <!-- new enctype that is used -->
+    <form action="" method="post" enctype="multipart/form-data">
+        <!-- limits file size of what user can upload (1st level security precaution - value in bytes) -->
+		<input type="hidden" name="MAX_FILE_SIZE" value="100000000">
+		<input type="file" name="file_upload">
+		<input type="submit" name="submit" value="Upload">
+	</form>
+</body>
+</html>

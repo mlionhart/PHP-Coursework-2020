@@ -1,0 +1,109 @@
+body {font-family: Arial;
+	margin:20px;
+}
+
+nav {font-size:1.5em;
+	background: #000;
+	color:#fff;
+	padding:15px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+nav a:link {text-decoration: none;
+	color: #fff;
+}
+
+nav a:visited {color:#fff;}
+nav a:hover {color:#fff;}
+nav a:active {color:#fff;}
+
+.userheader {margin-bottom:20px;
+	font-size:1.5em;
+	text-align: right;
+	width: auto;
+}
+.userheader a.profilelink {text-decoration: underline;
+	color:#333;
+}
+
+table {border:1px solid #fafafa;}
+
+th {background-color: #dadada;
+	padding:10px;
+}
+
+td {padding:10px;
+	background-color: #bababa;
+}
+
+.reglabel {display:inline-block;
+	width:150px;
+	margin-bottom:10px;
+	font-size:1.5em;
+}
+
+.reginput {font-size:1.5em;}
+
+.button1 {background-color: #4CAF50;
+	font-size:1.5em;
+	border:none;
+	color:#ffffff;
+	padding:15px;
+	opacity: .9;
+}
+
+.button1:hover {opacity: 1; }
+
+select {font-size: 1.5em;}
+
+footer {margin-top:20px;
+	background-color: #dadada;
+	padding:10px;
+}
+
+.post {font-size:1.5em;}
+
+.displaypost {font-size:1.5em;
+	margin:15px 0 35px 0;
+}
+
+.displaypost a:link,.displaypost a:visited, .displaypost a:hover {color:#666666;}
+
+
+.displaypostdate {color:#666666;
+	font-size:.5em;
+}
+
+.error {background-color: red;
+	padding:20px;
+	margin-top:20px;
+	color:#fff;
+	font-size:1.5em;
+}
+
+.success {background-color: #4CAF50;
+	padding:20px;
+	margin-top:20px;
+	color:#fff;
+	font-size:1.5em;
+}
+
+.content {background-color: #dadada;
+	padding:10px;
+	margin:15px 0 0 0;
+	font-style: italic;
+	border-top:3px solid #666666;
+}
+
+.logo {float:right;}
+
+.icon {color:#2A799B;}
+
+.clarkbook {color:#2A799B; margin-right:30px;
+	font-size:1.5em;
+	font-weight: bold;
+}
+
+.happy {color:green;}
+.sad {color:red;}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sample PHP Form</title>
+	<!-- Bootstrap CSS via CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-12">
+				<h1>Sample PHP Form</h1>
+				<p>CTEC 127 - PHP with SQL 1<br>Uses a PHP script to process the form</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<form method="post" action="process_form.php" class="border bg-light p-4">
+					<div class="form-group">
+						<label for="name" class="font-weight-bold">Name
+							<br>
+							<input type="text" id="name" name="name" class="form-control">
+						</label>
+					</div>
+
+					<div class="form-group">
+						<label for="street" class="font-weight-bold">Street
+							<br>
+							<input type="text" id="street" name="street" class="form-control">
+						</label>
+					</div>
+
+					<div class="form-group">
+						<label for="state" class="font-weight-bold">State
+							<br>
+							<select name="state" id="state" class="form-control">
+								<option value="-">--Select a State--</option>
+								<option value="Oregon">Oregon</option>
+								<option value="Washington">Washington</option>
+								<option value="California">California</option>
+							</select>
+						</label>
+					</div>
+
+					<div class="form-group">
+						<p class="font-weight-bold">Gender</p>
+						<div class="form-check">
+							<label for="male" class="form-check-label form-checked">
+								<input type="radio" name="gender" id="male" value="male" class="form-check-input">Male
+							</label>
+						</div>
+
+						<div class="form-check">
+							<label for="female" class="form-check-label">
+								<input type="radio" name="gender" value="female" id="female" class="form-check-input">Female
+							</label>
+						</div>
+
+						<div class="form-check">
+							<label for="notsay" class="form-check-label">
+								<input type="radio" name="gender" value="notsay" id="notsay" class="form-check-input">Rather Not Say
+							</label>
+						</div>
+						<div class="form-check">
+							<label for="other" class="form-check-label">
+								<input type="radio" name="gender" value="other" id="other" class="form-check-input">Other
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="comments" class="font-weight-bold">Comments</label>
+						<br>
+						<textarea id="comments" name="comments" rows="10" cols="40" class="form-control"></textarea>
+						<br>
+						<p>
+							<input type="submit" class="btn btn-primary">
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

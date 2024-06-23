@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--
+   Author Name: Bruce Elgort
+   Assignment : Order Page
+   Due Date   : 02/24/2013
+-->
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Bruce's Drum Shop - Place an Order</title>
+    <link href="project.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="pagewrapper">
+        <div id="header">
+            <div id="header_bg"></div>
+        </div><!-- end of header -->
+
+        <div id="sidebar">
+            <!-- start sidebar -->
+
+            <div id="nav">
+                <ul>
+                    <li><a href="welcome.html" title="Home page">Home</a></li>
+
+                    <li><a href="products.html" title="Products page">Products</a></li>
+
+                    <li><a href="order.html" title="Order page">Order</a></li>
+
+                    <li><a href="contact.html" title="Contact page">Contact</a></li>
+
+                    <li><a href="about.html" title="About page">About</a></li>
+                </ul>
+            </div><!-- end of nav -->
+
+            <div id="sidebarinner">
+                <h3>Thank you for ordering from Bruce's Drum Shop</h3>
+
+                <p>If you have any questions about your order please call us at (360) 555-1212.</p>
+            </div><!-- end sidebar inner -->
+        </div><!-- end sidebar -->
+
+        <div id="content">
+            <!--    type of product/service and quantity – repeat this for each product/service-->
+
+            <form method="post" action="http://ctec.clark.edu/~belgort/formprocessing/processform.php">
+                <fieldset>
+                    <legend>Where we should send your order</legend> <label for="fullname">Your Full Name:</label> <input type="text" size="60" name="fullname" id="fullname" maxlength="60"><br>
+                    <label for="street">Street:</label> <input type="text" size="60" name="street" maxlength="60" id="street"><br>
+                    <label for="city">City/State/ZIP:</label> <input type="text" size="20" name="city" maxlength="20" id="city"> <input type="text" size="10" name="state" maxlength="10"> <input type="text" size="7" name="zip" maxlength="6"><br>
+                    <label for="homephone">Home Phone:</label> <input type="text" size="15" name="homephone" maxlength="15" id="homephone"><br>
+                    <label for="cellphone">Cell Phone:</label> <input type="text" size="15" name="cellhone" maxlength="15" id="cellphone"><br>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Other things about you</legend> <label>Gender:</label> <input type="radio" name="gender" value="Male" id="gender1" checked> <label for="gender1">Male</label> <input type="radio" name="gender" value="Female" id="gender2"> <label for="gender2">Female</label><br>
+                    <label for="age">Age:</label> <input type="text" size="4" name="age" maxlength="3">
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>I want to buy the following</legend>
+                    <label for="snaredrums">Snare Drums:</label>
+                    <select name="Snare Drums" id="snaredrums">
+                        <option value="--Select One--" selected>
+                            --Select One--
+                        </option>
+
+                        <option value="5 x 14 Rogers 1967 $500">
+                            5 x 14 Rogers 1967 $500
+                        </option>
+
+                        <option value="5 x 14 Ludwig Supraphonic $400">
+                            5 x 14 Ludwig Supraphonic $400
+                        </option>
+
+                        <option value="3 x 14 Ludwig Picalo $300">
+                            3 x 14 Ludwig Picalo $300
+                        </option>
+                    </select><br>
+                    <label for="qty_snares">Quantity:</label> <input type="text" size="3" name="qty_snaredrums" maxlength="3" id="qty_snares"><br>
+                    <br>
+                    <label for="drumkits">Drum Kits:</label> <select name="Drum Kits" id="drumkits">
+                        <option value="--Select One--" selected>
+                            --Select One--
+                        </option>
+
+                        <option value="Rogers 5pc WMP $1,200">
+                            Rogers 5pc WMP $1,200
+                        </option>
+
+                        <option value="Slingerland 4pc Marble $1,100">
+                            Slingerland 4pc Marble $1,100
+                        </option>
+
+                        <option value="Ludwing 3pc Blue Sparkle $1,300">
+                            Ludwing 3pc Blue Sparkle $1,300
+                        </option>
+                    </select><br>
+                    <label for="qty_drumkits">Quantity:</label> <input type="text" size="3" name="qty_drumkits" maxlength="3" id="qty_drumkits"><br>
+                    <br>
+                    <label for="cymbals">Cymbals:</label> <select name="Cymbals" id="cymbals">
+                        <option value="--Select One--" selected>
+                            --Select One--
+                        </option>
+
+                        <option value="21&quot; Zildjain Ride $300">
+                            21&quot; Zildjain Ride $300
+                        </option>
+
+                        <option value="14&quot; Zildijian Hi-Hats $250">
+                            14&quot; Zildijian Hi-Hats $250
+                        </option>
+
+                        <option value="19&quot;  Trash Cymbal $300">
+                            19&quot; Trash Cymbal $300
+                        </option>
+                    </select><br>
+                    <label for="qty_cymbals">Quantity:</label> <input type="text" size="3" name="qty_cybmals" maxlength="3" id="qty_cymbals">
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Things I would like to see Bruce's offer customers</legend> <input type="checkbox" name="whatelse[]" value="handpercussion" id="handpercussion"> <label for="handpercussion">Hand Percussion</label> <input type="checkbox" name="whatelse[]" value="guitars" id="guitars" checked> <label for="guitars">Guitars</label> <input type="checkbox" name="whatelse[]" value="sheetmusic" id="sheetmusic"> <label for="sheetmusic">Sheet Music</label>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Comments you may have</legend> 
+                    <textarea name="comments" rows="10" cols="80">
+</textarea>
+                </fieldset><br>
+                
+                
+            <fieldset>
+            <legend>HTML5 Input Stuff</legend>
+            <input type="email" name="emailaddress">
+            <input type="date" name="emailaddress">
+            </fieldset>
+                
+                
+                
+                <input type="submit" value="Place your order" class="buttons">&nbsp;&nbsp;<input type="reset" value="Clear" class="buttons">
+            </form>
+        </div><!-- end of content -->
+
+        <div id="footer">
+            <div id="innerfooter">
+                <ul>
+                    <li><a href="welcome.html">Home</a></li>
+
+                    <li><a href="products.html">Products</a></li>
+
+                    <li><a href="order.html">Order</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div><!-- end inner footer -->
+
+            <p>&copy; 2013 Bruce's Drum Shop</p>
+
+            <p><a href="#header" title="Top of page">Top of Page</a></p>
+        </div><!-- end of footer -->
+    </div><!-- end of pagewrapper -->
+</body>
+</html>

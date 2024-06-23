@@ -1,0 +1,24 @@
+/* project.css */
+
+body {font-family:Verdana,Arial;
+	  margin:0;
+	  padding:0;
+	  background-color:#fafafa;}
+
+#wrapper {
+	background-color: #cccccc;
+	width:900px;
+}
+
+#errors {background-color:yellow;
+		 width:860px;
+		 padding:20px;
+}
+ 
+.row {
+     background-color:#cacaca;
+	 border-bottom:1px solid #fff;
+	 padding:40px;
+}
+
+.avatars {margin-bottom: 5px;}

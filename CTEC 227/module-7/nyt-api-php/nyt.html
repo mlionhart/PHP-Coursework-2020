@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NYT API via PHP (Server Side)</title>
+  <link href="css/nyt.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <section>
+      <header>
+        <a href="#" title="New York Times Top Headlines">
+          <h1>Top New York Times Headlines</h1>
+        </a>
+        <p>NYT API via PHP (Server Side)</p>
+        <p>Brought to you by the students of CTEC 227</p>
+        <button id="refresh">Refresh the News</button>
+      </header>
+    </section>
+    <div id="nytstories"></div>
+
+  </div> <!-- end wrapper -->
+  <footer>
+    <p>Copyright &copy; 2015 by Bruce Elgort</p>
+  </footer>
+
+  <script>
+      // get handle
+      const nytstories = document.querySelector('#nytstories');
+
+      const url = 'inc/getstories.php';
+
+      const refreshBtn = document.querySelector('#refresh');
+
+    
+      refreshBtn.addEventListener('click', ()=> {
+        refreshStories();
+      })
+
+      function refreshStories() {
+        nytstories.innerHTML = '';
+        fetch(url)
+            .then(res => resp.text())
+            .then(data => {
+                nytstories.innerHTML = data
+            })
+      }
+
+      refreshStories();
+
+  </script>
+
+</body>
+
+</html>

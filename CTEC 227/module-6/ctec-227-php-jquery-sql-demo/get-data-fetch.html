@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Get JSON data from a PHP script on web server</title>
+    </head>
+
+    <body>
+        <h1>Getting JSON data from a server side PHP script</h1>
+        <p>Data is stored in a MySQL Database</p>
+
+        <label for="id">Contact ID:</label> <input type="text" name="id" id="id">
+        <br><br>
+        <button id="submit">Go Get That Dater!</button>
+        <br><br>
+        <div id="output"></div>
+        <script>
+
+            const submit = document.querySelector('#submit')
+
+            submit.addEventListener('click', function () {
+                const id = document.querySelector('#id')
+                const output = document.querySelector('#output')
+                output.innerHTML = ''
+
+                const url = `get-sql-data.php?id=${id.value}`
+                console.log(url)
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        let innerHTML = "<p>Contact ID: " + data.id + "</p>" // build html
+                        innerHTML += "<p>First Name: " + data.first_name + "</p>"
+                        innerHTML += "<p>Last Name: " + data.last_name + "</p>"
+                        innerHTML += "<p>Email: " + data.email + "</p>"
+                        output.innerHTML = innerHTML
+                    }).catch(err => {
+                        output.innerHTML = '<p>SOMETHING WENT TERRIBLY WRONG</p>'
+                    })
+            })
+
+        </script>
+    </body>
+
+</html>

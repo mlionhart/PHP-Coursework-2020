@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Get JSON data from a PHP script on web server</title>
+    </head>
+
+    <body>
+        <h1>Getting JSON data from a server side PHP script</h1>
+        <p>Data is stored in a MySQL Database</p>
+
+        <label for="id">Contact ID:</label> <input type="text" name="id" id="id">
+        <br><br>
+        <button id="submit">Go Get That Dater!</button>
+        <br><br>
+        <div id="output"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#submit').on('click', function () {
+                    $('#output').empty(); // empty output div
+
+                    $.ajax({ // perform query. Note query parameter
+                        url: 'get-sql-data.php?id=' + $('#id').val(),
+                        dataType: 'JSON'
+                    })
+                        .done(function (data) {
+                            console.log(typeof data); // what did we get back?
+                            let innerHTML = "<p>Contact ID: " + data.id + "</p>"; // build html
+                            innerHTML += "<p>First Name: " + data.first_name + "</p>";
+                            innerHTML += "<p>Last Name: " + data.last_name + "</p>";
+                            innerHTML += "<p>Email: " + data.email + "</p>";
+                            $('#output').html(innerHTML);
+                        })
+                        .fail(function (data) { // something went wrong
+                            console.log('oh poop');
+                            $('#output').html('<h1>SOMETHING WENT TERRIBLY WRONG');
+                        });
+                }); // end submit
+            }); // end ready
+        </script>
+    </body>
+
+</html>

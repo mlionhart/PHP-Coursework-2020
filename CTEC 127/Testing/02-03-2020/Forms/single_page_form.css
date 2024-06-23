@@ -1,0 +1,20 @@
+label {
+    float: left;
+    width: 120px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    /* background-color: blue; */
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #060670;
+}
+
+input[type="submit"]:active {
+    background-color: #000000;
+}

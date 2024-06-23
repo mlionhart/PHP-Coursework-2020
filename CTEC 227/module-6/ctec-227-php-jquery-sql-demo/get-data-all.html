@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Get JSON data from a PHP script on web server</title>
+        <style>
+            div.student {
+                background: #dadada;
+                border: 1px solid #333333;
+                margin: 0 0 20px 0;
+                padding: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Getting JSON data from a server side PHP script</h1>
+        <p>Data is stored in a MySQL Database</p>
+
+        <button id="submit">Go Get That Dater!</button>
+        <br><br>
+        <div id="output"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#submit').on('click', function () {
+                    $('#output').empty(); // empty output div
+
+                    $.ajax({ // perform query. Note query parameter
+                        url: 'get-sql-data-all.php?id=' + $('#id').val(),
+                        dataType: 'JSON'
+                    })
+                        .done(function (data) {
+                            console.log(data);
+                            let innerHTML = '';
+                            for (let i = 0; i < data.length; i++) {
+                                innerHTML += "<div class=\"student\"><p>Contact ID: " + data[i].id + "</p>"; // build html
+                                innerHTML += "<p>First Name: " + data[i].first_name + "</p>";
+                                innerHTML += "<p>Last Name: " + data[i].last_name + "</p>";
+                                innerHTML += "<p>Email: " + data[i].email + "</p></div>";
+                            }
+
+                            $('#output').html(innerHTML);
+
+                        })
+                        .fail(function (data) { // something went wrong
+                            console.log('oh poop');
+                            $('#output').html('<h1>SOMETHING WENT TERRIBLY WRONG');
+                        });
+                }); // end submit
+            }); // end ready
+        </script>
+    </body>
+
+</html>

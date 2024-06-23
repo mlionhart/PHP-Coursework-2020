@@ -1,0 +1,152 @@
+/* style.css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #083058;
+    color: white;
+    padding: 20px;
+    margin-bottom: 1em;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.cyan {
+    background-color: cyan;
+}
+
+ul {
+    list-style: none;
+}
+
+.large {
+    font-size: large;
+}
+
+.xlarge {
+    font-size: x-large;
+}
+
+.xxlarge {
+    font-size: xx-large;
+}
+
+.smallradius {
+    border-radius: 1em;
+}
+
+.mediumradius {
+    border-radius: 2em;
+}
+
+.largeradius {
+    border-radius: 3em;
+}
+
+.greenfont {
+    color: rgb(57, 223, 57);
+}
+
+.redfont {
+    color: red;
+}
+
+.brownfont {
+    color: rgb(238, 167, 167);
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+main {
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.normal-list {
+    list-style: square;
+}
+
+.none {
+    padding: 0;
+}
+
+.moderate {
+    padding: 50px;
+}
+
+.toomuch {
+    padding: 100px;
+}
+
+img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.pmargin {
+    margin-top: .8em;
+}
+
+legend {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background-color: #083058;
+    margin-top: 1em;
+    margin-bottom: .15em;
+    padding: 10px;
+    color: white;
+}
+
+label[for="name"] {
+    margin-top: 1em;
+}

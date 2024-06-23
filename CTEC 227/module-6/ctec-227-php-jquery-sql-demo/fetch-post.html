@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Using Fetch to Post Form Data</title>
+    </head>
+
+    <body>
+        <form id="myForm">
+            <label for="student_id">Student ID</label><br><br>
+            <input type="text" id="student_id" name="student_id"><br><br>
+            <label for="first">First Name</label><br><br>
+            <input type="text" id="first" name="first_name"><br><br>
+            <label for="last">Last Name</label><br><br>
+            <input type="text" id="last" name="last_name"><br><br>
+            <label for="email">Email</label><br><br>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="phone">Phone</label><br><br>
+            <input type="text" id="phone" name="phone"><br><br>
+            <br><br>
+            <input type="submit" value="Save">
+        </form>
+        <br><br>
+        <div id="result"></div>
+        <script>
+            const myForm = document.querySelector('#myForm')
+            myForm.addEventListener('submit', (e) => {
+                e.preventDefault()
+                const formData = new FormData(myForm)
+                fetch('post-data.php', {
+                    method: 'post',
+                    body: formData
+                }).then(response => response.json())
+                    .then(data => {
+                        if (data.status != 'ok') {
+                            document.querySelector('#result').innerHTML = 'Record NOT saved.'
+                        } else {
+                            document.querySelector('#result').innerHTML = 'Record saved.'
+                        }
+                    })
+            })
+        </script>
+    </body>
+
+</html>

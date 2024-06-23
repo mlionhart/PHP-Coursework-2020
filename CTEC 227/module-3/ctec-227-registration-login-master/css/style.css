@@ -1,0 +1,14 @@
+/* style.css */
+
+#login, #logout {
+    /* set initial display to none, to allow JavaScript to take care of it */
+    display: none;
+}
+
+#showPassword {
+    text-decoration: underline;
+}
+
+#showPassword:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+#content {
+    width: 50%;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+    background-color: yellow;
+}
+
+h1 {
+    text-align: center;
+}

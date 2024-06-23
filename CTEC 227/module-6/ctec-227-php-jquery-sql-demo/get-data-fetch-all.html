@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Get JSON data from a PHP script on web server</title>
+        <style>
+            div.student {
+                background: #dadada;
+                border: 1px solid #333333;
+                margin: 0 0 20px 0;
+                padding: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Getting JSON data from a server side PHP script</h1>
+        <p>Data is stored in a MySQL Database</p>
+
+        <button id="submit">Go Get That Dater!</button>
+        <br><br>
+        <div id="output"></div>
+
+
+        <script>
+            const submit = document.querySelector('#submit')
+
+            submit.addEventListener('click', function () {
+                const id = document.querySelector('#id')
+                const output = document.querySelector('#output')
+                output.innerHTML = ''
+
+                const url = 'get-sql-data-all.php'
+                console.log(url)
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        let innerHTML = ''
+                        for (let i = 0; i < data.length; i++) {
+                            innerHTML += "<div class=\"student\"><p>Contact ID: " + data[i].id + "</p>"
+                            innerHTML += "<p>First Name: " + data[i].first_name + "</p>"
+                            innerHTML += "<p>Last Name: " + data[i].last_name + "</p>"
+                            innerHTML += "<p>Email: " + data[i].email + "</p></div>"
+                        }
+                        output.innerHTML = innerHTML
+                    }).catch(err => {
+                        output.innerHTML = '<p>SOMETHING WENT TERRIBLY WRONG</p>'
+                    })
+            })
+        </script>
+    </body>
+
+</html>
